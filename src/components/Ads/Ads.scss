@@ -1,0 +1,49 @@
+.container {
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr;
+  grid-template-rows: 1fr 0.6fr;
+  gap: 0px 1.5em;
+  grid-auto-flow: row;
+  grid-template-areas:
+    'image news'
+    'questions news';
+  margin: 0;
+}
+
+.news {
+  margin: 0;
+  grid-area: news;
+  background-color: var(--dark-blue);
+}
+
+.image {
+  margin: 0;
+  grid-area: image;
+  background-color: var(--orange);
+  img {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.questions {
+  margin: 1rem 0 0 0;
+  grid-area: questions;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 2em;
+  grid-auto-flow: row;
+  grid-template-areas: 'title read';
+  .title {
+    background-color: var(--red);
+    grid-area: title;
+    margin: 0;
+  }
+  .read {
+    background-color: var(--grey-blue);
+    grid-area: read;
+    margin: 0;
+  }
+}
